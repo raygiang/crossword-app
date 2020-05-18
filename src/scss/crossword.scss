@@ -1,0 +1,92 @@
+section.crossword-game {
+    h1 {
+        flex: 100%;
+    }
+
+    h1, h2 {
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    table {
+        border-spacing: 0;
+        margin: 0 auto;
+        background-color: #000;
+        flex: 75%;
+    }
+
+    tr {
+        td {
+            border: 1px solid #000;
+            border-left: none;
+            border-top: none;
+            padding: 0.5rem 0;
+            position: relative;
+
+            &.empty {
+                background-color: #000;
+            }
+
+            &:first-child {
+                border-left: 1px solid #000;
+            }
+
+            input {
+                text-transform: uppercase;
+                border: none;
+                text-align: center;
+                font-weight: bold;
+                font-size: 16px;
+
+                &:disabled {
+                    background-color: #FFF;
+                }
+                
+                &.empty {
+                    background-color: #000;
+                }
+            }
+
+            .hint-number {
+                position: absolute;
+                font-size: 12px;
+                left: 2px;
+                top: 2px;
+                font-weight: bold;
+            }
+        }
+
+        &:first-child {
+            td {
+                border-top: 1px solid #000;
+            }
+        }
+    }
+
+    .hint-container {
+        flex: 25%;
+        padding: 0 1rem;
+        
+        h3 {
+            margin: 0.5rem;
+        }
+
+        p {
+            margin: 0.25rem 0;
+
+            &.highlight {
+                background-color: yellow;
+            }
+        }
+    }
+
+    .game-panel {
+        display: flex;
+        flex: 100%;
+        padding: 0.5rem 0;
+
+        .notice {
+            padding-left: 2rem;
+        }
+    }
+}
